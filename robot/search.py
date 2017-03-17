@@ -5,18 +5,32 @@ Created on 16 Mar 2017
 '''
 from robot import robot
 from linked_list import linked_list
-from world import parseLine, create_world
+from world import parseLine, create_world, world
 
-def search(x,y,world,size,stack):
+"""def alghorithm(world):
+    "Function to choose sequence to visit neighboring cells "
+    rX = world.robotX
+    rY = world.robotY
+    gX = world.goalX
+    gY = world.goalY
+    
+    if rX < gX and rY < gY:
+        x < size-1 and search(x+1,y,world, size,stack)
+        y > 0 and search(x,y+1,world, size,stack
+        """
+    
+def search(x,y,world,stack):
+    "Recursive function to find the goal"
     coordin = [x,y]
     if world.matrix[x][y] == 2:
-        print ('found at %d,%d' % (x, y))
+        print ('Goal found at %d,%d' % (x, y))
+        stack.push(coordin)
         return True
     elif world.matrix[x][y] == 1:
-        print ('wall at %d,%d' % (x, y))
+        print ('Wall at %d,%d' % (x, y))
         return False
     elif world.matrix[x][y] == 3:
-        print ('visited at %d,%d' % (x, y))
+        print ('Cell visited at %d,%d' % (x, y))
         return False
         
     print ('visiting %d,%d' % (x, y))
@@ -27,10 +41,10 @@ def search(x,y,world,size,stack):
     world.matrix[x][y] = 3
     world.print_world()
     
-        # explore neighbors clockwise starting by the one on the right
-    if ((x < size-1 and search(x+1,y,world, size,stack))
-        or (y > 0 and search(x,y-1,world, size,stack))
-        or (x > 0 and search(x-1,y,world, size,stack))
-        or (y < size-1 and search(x,y+1,world, size,stack))):
+        # explore neighbors clockwise 
+    if ((x < world.size-1 and search(x+1,y,world,stack))
+        or (y > 0 and search(x,y-1,world,stack))
+        or (x > 0 and search(x-1,y,world,stack))
+        or (y < world.size-1 and search(x,y+1,world,stack))):
         return True
     return False

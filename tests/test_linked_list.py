@@ -18,4 +18,3 @@ def test_stack():
     s.pop()
     s.pop() 
     eq_(s.is_empty(),True,print("is_empty method test passed"))
-    print(s)

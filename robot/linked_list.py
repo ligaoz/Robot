@@ -3,7 +3,6 @@ Created on 9 Mar 2017
 
 @author: liga
 '''
-import time
 import matplotlib.pyplot as plt
 class linked_list:
     "Linked list LIFO Stack implementation "
@@ -56,21 +55,4 @@ class linked_list:
         answer = self._head._element
         self._head = self._head._next
         self._size -= 1 # decrease the size counter
-        del self.array[self._size] # delete last  entry from array
         return answer
-    
-    def remove(self):
-        if self.is_empty(): # check if stack is not empty
-            raise print( "Stack is empty" )
-        else:
-            self._size -= 1 # decrease the size counter
-            del self.array[self._size]
-    
-    def __str__(self):
-        result = "-> " 
-        if not self.is_empty():
-            for i in range(self._size):
-                result += "%s " % str(str(self.array[i])+" -> ")
-            return result
-        else:
-            return "Empty stack"

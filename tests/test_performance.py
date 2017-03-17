@@ -53,7 +53,7 @@ def test_perf():
         #uncomment one feature at a time to test it
         #a.is_empty()
         #a.sizes
-        
+        a.indexAt(9)
         #a.push('a')
         #a.pop()
 

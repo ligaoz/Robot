@@ -28,7 +28,10 @@ class array_ADT:
         
     def indexAt(self,index):
         "Returns element at index value"
-        return self.array[index]
+        if index<self.size:
+            return self.array[index]
+        else:
+            return False
     
     def pop(self):
         "Removes and returns the last element from the stack"

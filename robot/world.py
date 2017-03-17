@@ -5,7 +5,7 @@ Created on 9 Mar 2017
 '''
 
 class world:
-
+    # create world object
     def __init__(self,size,robot,goal):
         self.size = size
         self.matrix = [[0] * size for _ in range(size)]
@@ -17,9 +17,11 @@ class world:
         
 
     def wall(self,x,y):
+        "method to create wall in the world"
         self.matrix[x][y] = 1
     
     def print_world(self):
+        "Method to print the world"
         for i in range(self.size):
             print ()
             for j in range(self.size):
@@ -66,7 +68,7 @@ def create_world(size, data, robot, goal):
         else:
             newWorld.matrix[x][y] = 2
             return True
-    
+    #If robot and wall values are valid then return newWorld object, else return False
     if add_robot(robot,size) and add_goal(goal):
         return newWorld
     else:

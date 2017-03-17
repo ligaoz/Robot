@@ -11,7 +11,6 @@ def test_robot():
     r2d2.where_is_robot()
     print(r2d2.y)
     x = r2d2.move_up()
-    print(x.x)
     print(r2d2.y)
     eq_(r2d2.robot[0],1, print("move up OK"))
     robot.move_down(r2d2)

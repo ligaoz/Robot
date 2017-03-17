@@ -24,4 +24,5 @@ def test_array():
     arr.push(1)
     arr.push(2)
     arr.push(3)
+    eq_(arr.indexAt(30),False,print("index_at test passed"))
     print(arr)

@@ -5,7 +5,7 @@ Created on 9 Mar 2017
 '''
 import argparse
 from world import parseLine, create_world
-from linked_list import linked_list
+from array_ADT import array_ADT
 from robot import robot
 from search import search
 
@@ -18,9 +18,12 @@ def main():
     if create_world != False:
         world = create_world(size, data, rob, goal)
         world.print_world()
-        stack = linked_list()
+        stack = array_ADT()
         r2d2 = robot(rob)
-        search(r2d2.x,r2d2.y,world, size,stack)
+        search(r2d2.x,r2d2.y,world,stack)
+        print(stack)
+    else:
+        print("World couldn't be created")
         
 if __name__ == '__main__':
     main()
