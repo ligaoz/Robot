@@ -5,9 +5,9 @@ Created on 9 Mar 2017
 '''
 import argparse
 from robot.world import parseLine, create_world
-from array_ADT import array_ADT
-from robot import robot
-from search import search
+from robot.array_ADT import array_ADT
+from robot.robot import robot
+from robot.search import search
 
 def main():
     parser = argparse.ArgumentParser()
