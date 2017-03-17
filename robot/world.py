@@ -38,7 +38,11 @@ def create_world(size, data, robot, goal):
     for line in data:
         x = int(line[1])
         y = int(line[2])
-        newWorld.wall(x, y)
+        if 0 < x < size and 0 < y < size:
+            newWorld.wall(x, y)
+        else:
+            print("Wall coordinates out of range")
+            return False
     def add_robot(robot,size):
         x = robot[0]
         y = robot[1]

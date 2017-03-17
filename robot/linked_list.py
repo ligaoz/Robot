@@ -22,8 +22,7 @@ class linked_list:
     def __init__(self):
         """Create empty stack"""
         self._head = None #reference to the head node
-        self._size = 0 #number of stack elements
-        self.array = []
+        self._size = 0 #number of elements in linked list
         
 #--------------------------methods---------------------------------------
         
@@ -42,7 +41,6 @@ class linked_list:
     def push(self,elem):
         "Ads element elem to the tail of the stack"
         self._head = self._Node(elem, self._head) # create and link a new node self
-        self.array += [elem,] #save element in array
         self._size += 1 #increment the size counter
     
     def head(self):
