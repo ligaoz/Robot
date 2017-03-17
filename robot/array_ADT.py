@@ -3,9 +3,6 @@ Created on 9 Mar 2017
 
 @author: liga
 '''
-import time
-import matplotlib.pyplot as plt
-
 
 class array_ADT:
     def __init__(self):

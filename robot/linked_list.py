@@ -3,7 +3,7 @@ Created on 9 Mar 2017
 
 @author: liga
 '''
-import matplotlib.pyplot as plt
+
 class linked_list:
     "Linked list LIFO Stack implementation "
 #-------------------------- nested Node class --------------------------

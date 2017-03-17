@@ -3,9 +3,8 @@ Created on 16 Mar 2017
 
 @author: liga
 '''
-from robot import robot
-from linked_list import linked_list
-from world import parseLine, create_world, world
+
+
 
 """def alghorithm(world):
     "Function to choose sequence to visit neighboring cells "
