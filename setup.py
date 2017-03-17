@@ -5,7 +5,7 @@ Created on 17 Mar 2017
 '''
 from setuptools import setup
 
-setup(name="led_tester",
+setup(name="exploratory_robot",
       version="0.1",
       description="Exploratory Robot",
       url="",
