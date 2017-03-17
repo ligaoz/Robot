@@ -4,7 +4,7 @@ Created on 9 Mar 2017
 @author: liga
 '''
 import argparse
-from world import parseLine, create_world
+from robot.world import parseLine, create_world
 from array_ADT import array_ADT
 from robot import robot
 from search import search
