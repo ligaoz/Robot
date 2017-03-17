@@ -23,7 +23,7 @@ def main():
         search(r2d2.x,r2d2.y,world,stack)
         print(stack)
     else:
-        print("World couldn't be created")
+        print("World couldn't be created ")
         
 if __name__ == '__main__':
     main()
