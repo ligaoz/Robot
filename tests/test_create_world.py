@@ -15,3 +15,5 @@ def test_create_world():
     eq_(new.matrix[1][4],1,msg)
     eq_(new.matrix[1][5],1,msg)
     eq_(create_world(8, data,[1,5],[1,3]), False, print("Robot and goal check passed"))
+    eq_(create_world(8, data,[-1,5],[1,3]), False, print("Robot out of range test check passed"))
+    eq_(create_world(8, data,[1,-5],[1,3]), False, print("Robot out of range test check passed"))

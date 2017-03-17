@@ -33,16 +33,22 @@ class world:
     
 
 def create_world(size, data, robot, goal):
+    "Function to create the multidimensional array with walls and goal, returns False if goal or robot coordinates are out of range or in the wall"
     newWorld = world(size,robot,goal)
     for line in data:
         x = int(line[1])
         y = int(line[2])
         newWorld.wall(x, y)
-    def add_robot(robot):
+    def add_robot(robot,size):
         x = robot[0]
         y = robot[1]
         if newWorld.matrix[x][y] == 1:
             print("Robot can't be in the wall")
+            return False
+        else:
+            return True
+        if x<0 and x>size-1 or y<0 and y>size-1:
+            print("Robot coordinates out of range")
             return False
         else:
             return True
@@ -54,9 +60,10 @@ def create_world(size, data, robot, goal):
             print("Goal can't be in the wall")
             return False
         else:
+            newWorld.matrix[x][y] = 2
             return True
     
-    if add_robot(robot) and add_goal(goal):
+    if add_robot(robot,size) and add_goal(goal):
         return newWorld
     else:
         return False

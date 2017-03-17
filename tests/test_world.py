@@ -8,7 +8,8 @@ from robot.world import world
 
 def test_world():
     #data,size = parseLine("/Users/liga/Documents/robot_data.txt")
-    newWorld = world(8)
+    newWorld = world(8,[0,7],[7,0])
+    print(newWorld.matrix)
     for i in range(0,8):
         newWorld.wall(0,i)
     eq_(newWorld.matrix[0][1], 1)
